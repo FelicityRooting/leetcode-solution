@@ -10,18 +10,18 @@
 //可比喻为，因为比别人多还有另外一种解释，就是你的票抵消了我的一部分票后，我还有剩。
 public class Solution {
     public int majorityElement(int[] nums) {
-        int count = 0;
-        int a=nums[0];
-        for (int i =0; i<nums.length; i++) {
-            if (count == 0) {
-                a=nums[i];
-                count=1;
-            } else if (a==nums[i]) {
-                count++;
+        int count = 0;//建立计数变量
+        int a=nums[0];//设a为数组nums的第一位
+        for (int i =0; i<nums.length; i++) {//遍历数组
+            if (count == 0) {//如果count等于0（后来的元素抵消原先的至0，说明后来的元素的数量大于等于原先的元素的数量）
+                a=nums[i];//则a=后来的元素
+                count=1;//count设为1，继续新的计票
+            } else if (a==nums[i]) {//如果后面的元素和当前a的元素相同
+                count++;//计数加1
             } else {
-                count--;
+                count--;//如果不同，则抵消，count减1
             }
         }
-        return a;
+        return a;//最后剩下的那个就是majority element
     }
 }
