@@ -20,7 +20,7 @@ class Solution {
             int j = 0;
             for (j = 0; j < target.length(); j++) { //用target里面的每一个字母去对比
                 if (source.charAt(i + j) != target.charAt(j)) { //一旦有不一样的字母，立刻停止
-                    break;
+                    break;//break 是结束程序不往下走了，一般用在循环中，终止循环的，continue在循环中表示跳出本次循环，直接进行下一次循环
                 }
             }
             if (j == target.length()) { //如果从source的i处，数了j个字母与target的长度相同（也就是和target完全一样），那么就返回那个i值
