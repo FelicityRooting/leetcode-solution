@@ -1,5 +1,5 @@
 public class Solution {
-    //与lintcode33的题基本一样，改了一点点
+    //与lintcode38的题基本一样，改了一点点
     //Search a 2D Matrix II 
     /*
     Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
