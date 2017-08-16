@@ -17,6 +17,9 @@ public class Solution {
     public List<String> binaryTreePaths(TreeNode root) {
         // Write your code here
         //遍历的过程中记录之前的path，一旦遍历到叶子节点便将该path加入结果中
+        //在加该点时，先把该点的左右儿子路径都算出来，然后把该点加入到这些路径
+        //前面就可以这样递归做，如果遇到null，直接return。如果递归到叶子结点，
+        //把该点直接加进去就好
         ArrayList<String> paths = new ArrayList<String>();
         if (root == null) {
             return paths;
