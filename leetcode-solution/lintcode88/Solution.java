@@ -33,10 +33,10 @@ public class Solution {
         	return root;
         }
         //分别求左右子树的lca
-        TreeNode left = lowestCommonAncestor(root.left, node1, node2);
-        TreeNode right = lowestCommonAncestor(root.right, node1, node2);
+        TreeNode left = lowestCommonAncestor(root.left, A, B);
+        TreeNode right = lowestCommonAncestor(root.right, A, B);
         //如果左边和右边都是非空，则返回root
-        if (left != null || right != null) {
+        if (left != null && right != null) {
         	return root;
         }
         //如果左边是非空，返回左
