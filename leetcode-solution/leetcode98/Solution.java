@@ -30,7 +30,9 @@ public class Solution {
     //这和root.left < root <= root.right是相符的。在处理完一棵子树后，
     //lastNode指向root.right, 而当前处理的节点指向了root的父节点，又保证了
     //一个节点所有左子树中的节点都小于父节点
-    private int lastVal = Integer.MIN_VALUE;        
+    private int lastVal = Integer.MIN_VALUE; 
+    //firstNode只是用来标记当前是否是第一个节点，因为第一个节点没有lastVal
+    //这个值。       
     private boolean firstNode = true;
     public boolean isValidBST(TreeNode root) {
         //root只要是空，当前的tree就是BST    
