@@ -125,3 +125,21 @@ public class Solution {
     		return true;
     	}
 }
+
+
+//version 2 灌水法，flood fill algorithm BFS, 时间复杂度为
+O(R * C)
+public class Solution {
+    /**
+     * @param image a binary matrix with '0' and '1'
+     * @param x, y the location of one of the black pixels
+     * @return an integer
+     * Smallest Rectangle Enclosing Black Pixels
+     */
+    //就是FloodFill的原理十分简单，就是把一个点x的所有相邻的点都
+    //涂上x点的颜色，一直填充下去，直到这个区域内所有的点都被填充
+    //完为止。
+    public int minArea(char[][] image, int x, int y) {
+        
+    }
+}
