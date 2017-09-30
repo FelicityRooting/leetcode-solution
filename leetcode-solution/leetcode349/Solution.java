@@ -23,7 +23,7 @@ public class Solution {
         
         Arrays.sort(nums1);
         for (int i = 0; i < nums2.length; i++) {
-            if (set.contains(nums2[i])) {
+            if (set.contains(nums2[i])) {//这个if条件句注释掉似乎没什么影响
                 continue;
             }
             if (binarySearch(nums1, nums2[i])) {
