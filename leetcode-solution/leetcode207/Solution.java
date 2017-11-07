@@ -31,7 +31,8 @@ public class Solution {
             //first take course 0
             edges[prerequisites[i][1]].add(prerequisites[i][0]);
         }
-        //定义一个queue变量，将所有入度为0的点放入队列中，然后开始遍历队列
+
+        //定义一个queue变量，将所有入度为0的点放入队列中，然后再开始遍历队列
         Queue queue = new LinkedList();
         for (int i = 0; i < degree.length; i++) {
             if (degree[i] == 0) {
