@@ -7,7 +7,7 @@ class Solution:
     def permuteUnique(self, nums):
         # write your code here
         if len(nums) == 0:
-            return []
+            return [[]]
         if len(nums) == 1:
             return [nums]
         res = []
