@@ -11,3 +11,4 @@ class Solution:
         for i in nums:
             res += [j + [i] for j in res]
         return res
+# output = [[],[1],[1,2],[1,2,3],[1,3],[2],[2,3],[3]]
