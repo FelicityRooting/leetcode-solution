@@ -7,6 +7,22 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+
+
+// Given a binary tree, find the length of the longest consecutive sequence path.
+// The path could be start and end at any node in the tree
+// Have you met this question in a real interview?
+// Example
+
+//     1
+//    / \
+//   2   0
+//  /
+// 3
+
+// Return 4 // 0-1-2-3
+
 class ResultType {
     public int maxlength;
     public int maxup;
@@ -15,8 +31,8 @@ class ResultType {
         maxlength = length;
         maxup = up;
         maxdown = down;
-    } 
-} 
+    }
+}
 public class Solution {
     /**
      * @param root the root of binary tree
@@ -27,7 +43,7 @@ public class Solution {
         //与I的题稍微不同的地方在于，路径可以在任意一点开始和结束
         return helper(root).maxlength;
     }
-    
+
     private ResultType helper(TreeNode root) {
         if (root == null) {
             return new ResultType(0, 0, 0);
