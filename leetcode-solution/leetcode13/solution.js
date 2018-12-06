@@ -50,7 +50,7 @@ var romanToInt = function(s) {
         const next = rules[s.charAt(i - 1)];
         if (curr > next) {
             sum = sum + curr - next;
-            i = i - 1;
+            i = i - 1;//往前挪一个，这样上面i--的时候又挪一个
         } else {
             sum = sum + curr;
         }
