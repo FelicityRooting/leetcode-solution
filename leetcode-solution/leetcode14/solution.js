@@ -21,6 +21,12 @@
  * param {string[]} strs
  * return {string}
  */
+
+//  思路：
+//  1.先给strs排个序，这样最短并且按字母表排前的就会在strs[0]
+//  2.把strs[0]的每一项拿出来和后面的每个string的每一项比对
+//  3.如果有不一样的，用slice来获取相同的部分
+
 var longestCommonPrefix = function(strs) {
     if (!strs || strs.length === 0) return ''
     //先给字符串排序,找到strs[0]为最短并且按字母排序最靠前的
