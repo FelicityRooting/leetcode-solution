@@ -23,10 +23,16 @@
 // Input: [1,3,5,6], 0
 // Output: 0
 /**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
+ * param {number[]} nums
+ * param {number} target
+ * return {number}
  */
+
+//  思路：
+//  1.运用binary search，注意使用Math.floor来限定小数取整，否则会有错误
+//  2.套用万能公式，注意第一次判定nums[mid] == target时，要考虑到可能mid的前一个数也等于target的情况
+//  所以要往前再进行一次判断
+
 var searchInsert = function(nums, target) {
     if (nums == null || nums.length == 0) {
         return 0;
