@@ -35,7 +35,7 @@ var mySqrt = function(x) {
         let mul = mid * mid;
         if (mul == x) {
             return mid;
-        }else if (mul > x) {
+        } else if (mul > x) {
             end = mid;
         } else {
             start = mid;
