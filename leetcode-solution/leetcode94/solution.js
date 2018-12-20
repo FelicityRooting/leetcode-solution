@@ -44,3 +44,19 @@ var inorderTraversal = function(root) {
     }
     return res;
 };
+//递归版本
+var inorderTraversal = function(root) {
+    let res = new Array();
+    if(!root) {
+        return res;
+    }
+    if (root.left) {
+        res = res.concat(inorderTraversal(root.left));
+    }
+    // res = res.concat(root.val);
+    res.push(root.val);
+    if (root.right) {
+        res = res.concat(inorderTraversal(root.right));
+    }
+    return res;
+}
