@@ -48,3 +48,20 @@ function preorderTraversal(root) {
     }
     return res;
 };
+
+//递归版
+function preorderTraversal(root) {
+    let res = [];
+    if (!root) {
+        return res;
+    }
+    res.push(root.val);
+    if (root.left) {
+        res = res.concat(preorderTraversal(root.left));
+    }
+    if (root.right) {
+        res = res.concat(preorderTraversal(root.right));
+    }
+    return res;
+}
+
