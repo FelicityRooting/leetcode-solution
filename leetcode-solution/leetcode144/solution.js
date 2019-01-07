@@ -30,6 +30,8 @@
 // 4. 继续把stack的头一个数push到res数组里（这时候就是左子节点被存入res了）
 // 5. 把左子节点取出，看看它有没有左右子节点，在unshift到stack里
 // 6. 循环
+
+//iterative 的queue版
 function preorderTraversal(root) {
     var res = [];
     if (!root) {
