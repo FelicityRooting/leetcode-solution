@@ -22,6 +22,8 @@
  * param {string} str
  * return {string}
  */
+// 思路：
+// 1. 如果不让直接用，可以用正则表达式加上ascel码
 var toLowerCase = function(str) {
     return str.toLowerCase();
 };
